@@ -24,12 +24,5 @@ services:
     volumes:
       - ./mysql/data:/var/lib/mysql
     environment:
-      MYSQL_USER: root
-      MYSQL_ROOT_PASSWORD: secret
-
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin:latest
-    ports:
-      - 8888:80
-    depends_on:
-      - db
+      MYSQL_USER: user
+      MYSQL_ROOT_PASSWORD: password
